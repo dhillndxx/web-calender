@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="shortcut icon" href="images/iconnn.png" type="image/x-icon" />    <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="login.css">
+  <!-- Import Google font - Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-wrapper">
+      <h2>Calender>></h2>
+      <form id="login-form" onsubmit="handleLogin(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" onclick="redirectToCalendar()">Go to Calender>></button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Perform authentication logic here
+      // For simplicity, let's assume login is successful
+      alert("Login successful!");
+      redirectToCalendar();
+    }
+
+    function redirectToCalendar() {
+      // Redirect to the calendar page (index.html)
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+
+</html>
